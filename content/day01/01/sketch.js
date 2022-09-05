@@ -2,12 +2,10 @@ let canvas, video;
 
 // Default P5 setup function
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
-    video = createCapture(VIDEO);
-    video.hide();
+    createCanvas(700, 700)
 }
 
 // Default P5 draw loop function 
 function draw() {
-    image(video, 0, 0, width, height);
+    background(0)
 }
