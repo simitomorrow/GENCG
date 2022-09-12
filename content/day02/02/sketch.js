@@ -5,7 +5,7 @@ let tileWidth
 let tileHeight
 
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(800, 800);
   tileWidth = height/gridYAmount
   tileHeight = width/gridXAmount
   frameRate(10)
@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(100, 100, 100, 250)
   strokeWeight(5)
-  radius = 150/mouseX*width
+  radius = 150/(mouseX+350)*width
   console.log(mouseX)
   for (let i = 0; i < gridYAmount; i++) {
     for (let j = 0; j < gridXAmount; j++) {

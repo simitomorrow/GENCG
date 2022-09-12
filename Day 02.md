@@ -32,18 +32,19 @@ function draw() {
 
 ## Random Shapes
 
-The next image that struck attention was this one:
+The next image that struck my attention was this one:
 
 ![Example Image](content/day02/pattern01.jpg)
 
 It seemed simple to recreate. Just a bunch of shapes with random colors distributed on a grid.
 
 ### 1. Lines
-I already had the grid so I added some lines:
+I already had the grid so I started with lines:
 
 {% raw %}
 <iframe src="content/day02/03-1/embed.html" width="100%" height="800" frameborder="no"></iframe>
 {% endraw %}
+
 
 ```js
 function form1(x, y) {
@@ -58,8 +59,9 @@ function form1(x, y) {
 Next up were randomly sized circles:
 
 {% raw %}
-<iframe src="content/day02/03-1/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-2/embed.html" width="100%" height="800" frameborder="no"></iframe>
 {% endraw %}
+
 
 ```js
 function form2(x, y) {
@@ -88,8 +90,9 @@ Even though I only had two shapes, there were already 4 different ways for me to
 4. Nothing
 
 {% raw %}
-<iframe src="content/day02/03-1/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-3/embed.html" width="100%" height="800" frameborder="no"></iframe>
 {% endraw %}
+
 
 ```js
 function draw() {
@@ -125,13 +128,13 @@ function formRoulette(x, y) {
 }
 ```
 
-
 ### 4. Squares
 Lastly I tried to add in some squares like they don't belong to the grid by rotating them and having them much larger than the usual tile size: 
 
 {% raw %}
-<iframe src="content/day02/03-1/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-4/embed.html" width="100%" height="800" frameborder="no"></iframe>
 {% endraw %}
+
 
 ```js
 function form3(x, y) {
