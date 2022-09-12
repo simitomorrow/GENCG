@@ -8,6 +8,9 @@ let mazeTiles = []
 let timers = [0, 0, 0]
 const timerSpeeds = [0.03, 0.03, 0.03]
 const timerWaits = [2, 4, 5]
+let pattern1 = "0101"
+let pattern2 = "0111"
+let pattern3 = "1001"
 
 class mazeTile {
   constructor(x, y, timer, color, doorString) {
@@ -22,7 +25,7 @@ class mazeTile {
 function setup() {
   angleMode(DEGREES)
   rectMode(CORNERS)
-  createCanvas(1200, 1200)
+  createCanvas(800, 800)
   tileWidth = height / gridXAmount
   tileHeight = width / gridYAmount
   colorMode(HSB, 360, 100, 100, 100)
@@ -175,16 +178,16 @@ function createInitialGrid() {
         randomString += rng > 0.81 ? "1" : "0"
       }
       if (timerChoice === 0) {
-        mazeTiles.push(new mazeTile(i, j, timerChoice, color1, randomString))
+        mazeTiles.push(new mazeTile(i, j, timerChoice, color1, pattern1))
       }
       if (timerChoice === 1) {
-        mazeTiles.push(new mazeTile(i, j, timerChoice, color2, randomString))
+        mazeTiles.push(new mazeTile(i, j, timerChoice, color2, pattern2))
       }
       if (timerChoice === 2) {
-        mazeTiles.push(new mazeTile(i, j, timerChoice, color3, randomString))
+        mazeTiles.push(new mazeTile(i, j, timerChoice, color3, pattern3))
       }
       if (timerChoice === 3) {
-        mazeTiles.push(new mazeTile(i, j, timerChoice, color1, randomString))
+        mazeTiles.push(new mazeTile(i, j, timerChoice, color1, pattern1))
       }
     }
   }
