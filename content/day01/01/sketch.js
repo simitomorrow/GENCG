@@ -9,7 +9,7 @@ const lineWeight = 0.11;
 // Default P5 setup function
 function setup() {
     colorMode(HSB, 100);
-    createCanvas(1200, 800);
+    createCanvas(800, 800);
     stroke(255);
     frameRate(60);
     for (let i = 0; i < pointAmount; i++) {
