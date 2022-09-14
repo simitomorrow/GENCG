@@ -1,19 +1,19 @@
-# Day 02
+# Day 02 - Grids & Iterative Patterns
 
-## Grids & Iterative Patterns
-I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and it's online examples. Most of which I saw used a grid interacting with my mouse coordinates to e.g increase the density or size of the elements on the grid.
+## 1. Bubble Foam
+For my first graphic I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and it's online examples. Most of which use a grid interacting with mouse coordinates to e.g increase the density or size of the elements on the grid.
 
 So I borrowed that idea and started with something that looks like a bubble foam:
 
+<br>
 
-## Bubble Foam
 
 
 {% raw %}
-<iframe src="content/day02/02/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/02/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
-The code for this is really straight forward: draw white circles with random size, scaling with the mouse cursor's location.
+The code for this is really straight forward: draw white circles with random size, scaling with the mouse cursor's location on the x-axis.
 
 ```js
 function draw() {
@@ -30,7 +30,7 @@ function draw() {
 ```
 
 
-## Random Shapes
+## 2. Random Shapes
 
 The next image that struck my attention was this one:
 
@@ -42,7 +42,7 @@ It seemed simple to recreate. Just a bunch of shapes with random colors distribu
 I already had the grid so I started with lines:
 
 {% raw %}
-<iframe src="content/day02/03-1/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-1/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 
@@ -59,7 +59,7 @@ function form1(x, y) {
 Next up were randomly sized circles:
 
 {% raw %}
-<iframe src="content/day02/03-2/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-2/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 
@@ -90,7 +90,7 @@ Even though I only had two shapes, there were already 4 different ways for me to
 4. Nothing
 
 {% raw %}
-<iframe src="content/day02/03-3/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-3/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 
@@ -129,10 +129,10 @@ function formRoulette(x, y) {
 ```
 
 ### 4. Squares
-Lastly I tried to add in some squares like they don't belong to the grid by rotating them and having them much larger than the usual tile size: 
+Lastly I tried to add in some squares like they seemingly don't belong to the grid by rotating them and having them much larger than the usual tile size: 
 
 {% raw %}
-<iframe src="content/day02/03-4/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day02/03-4/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 
