@@ -17,16 +17,16 @@ function draw() {
   strokeWeight(3)
   fill(color1)
   stroke(color0)
-  let t = 1 * (frameCount - 1) / 100;
-  let m = 1000;
-  let delay = 1.5;
-  circle(x1(t), y1(t), 30)
-  circle(x2(t), y2(t), 30)
+  circle(x1(timer), y1(timer), 30)
+  circle(x2(timer), y2(timer), 30)
   strokeWeight(1)
-  for (let i = 0; i <= m; i++) {
-    let tt = 1 * i / m;
-    let x = lerp(x1(t - delay * tt), x2(t - delay * (1 - tt)), tt);
-    let y = lerp(y1(t - delay * tt), y2(t - delay * (1 - tt)), tt);
+  let timer = 1 * (frameCount - 1) / 100;
+  let detail = 1000;
+  let delay = -1.5;
+  for (let i = 0; i <= detail; i++) {
+    let deltaT = 1 * i / detail;
+    let x = lerp(x1(timer - delay * deltaT), x2(timer - delay * (1 - deltaT)), deltaT);
+    let y = lerp(y1(timer - delay * deltaT), y2(timer - delay * (1 - deltaT)), deltaT);
     point(x, y);
   }
 }
