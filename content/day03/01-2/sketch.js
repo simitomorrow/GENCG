@@ -5,8 +5,8 @@ let tileWidth, tileHeight
 let color1, color2, color3, color4
 let a, b, trans1, trans2
 let timers = [0, 0, 0]
-const timerSpeeds = [0.02, 0.02, 0.02]
-const timerWaits = [2, 4, 5]
+const timerSpeeds = [0.005, 0.005, 0.005]
+const timerWaits = [1.5, 2, 2.5]
 
 let mazeTiles = []
 class mazeTile {
@@ -144,8 +144,19 @@ function easing(t, b, c, d) {
   if (t > d) {
     return b+c
   }
-  if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
-  return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+  var s = 1.70158;
+  var p = 0;
+  var a = c;
+  if (t == 0) return b;
+  if ((t /= d / 2) == 2) return b + c;
+  if (!p) p = d * (.3 * 1.5);
+  if (a < Math.abs(c)) {
+    a = c;
+    var s = p / 4;
+  }
+  else var s = p / (2 * Math.PI) * Math.asin(c / a);
+  if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+  return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
 }
 
 function createInitialGrid() {
