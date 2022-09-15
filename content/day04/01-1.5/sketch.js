@@ -17,12 +17,12 @@ function draw() {
   strokeWeight(3)
   fill(color1)
   stroke(color0)
-  circle(x1(timer), y1(timer), 30)
-  circle(x2(timer), y2(timer), 30)
-  strokeWeight(1)
   let timer = 1 * (frameCount - 1) / 100;
   let detail = 1000;
   let delay = -1.5;
+  circle(x1(timer), y1(timer), 30)
+  circle(x2(timer), y2(timer), 30)
+  strokeWeight(1)
   for (let i = 0; i <= detail; i++) {
     let deltaT = 1 * i / detail;
     let x = lerp(x1(timer - delay * deltaT), x2(timer - delay * (1 - deltaT)), deltaT);
