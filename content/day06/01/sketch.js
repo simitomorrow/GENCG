@@ -7,14 +7,11 @@ const minFreq = 50
 const maxFreq = 2000
 const minAmp = 0.02
 const maxAmp = 1
-let maxDistance
-
 
 function setup() {
   rectMode(CENTER);
   createCanvas(800, 800)
   startUp()
-  initMouthRange()
   colorMode(HSB, 360, 100, 100, 100)
   color0 = color(0, 0, 100, 100)
   color1 = color(0, 0, 0, 100)
@@ -24,8 +21,6 @@ function setup() {
   eyeSizeX = width/14
   eyeSizeY = height/14
   eyeRadius = height/40
-  mouthRadius = height/100
-  maxDistance = sqrt((width/10*4)**2 + (height/10*5)**2)
   osc = new p5.Oscillator('sine');
   osc.start();
   // noLoop()
@@ -41,36 +36,12 @@ function draw() {
   if(talking){
     osc.freq(freq, 0);
     osc.amp(amp, 0);
-    leftEye()
-    rightEye()
-    mouth()
   } else {
     osc.amp(0, 0.5);
-    rect(width/10*4, height/10*4, eyeSizeX, eyeSizeY)
-    rect(width/10*6, height/10*4, eyeSizeX, eyeSizeY)
-    rect(width/2, height/10*6, width/8, height/40)
   }
-}
-
-function leftEye(){
-  let xCenter = width/10*4 
-  let yCenter = height/10*4
-  rect(xCenter, yCenter, eyeSizeX, eyeSizeY)
-}
-
-function rightEye(){
-  let xCenter = width/10*6 
-  let yCenter = height/10*4
-  rect(xCenter, yCenter, eyeSizeX, eyeSizeY)
-}
-
-function mouth(){
-  //ranges - width: 10 - 170, height: 10 - 10
-  let xCenter = width/2 
-  let yCenter = height/10*6
-  let mouthWidth = map(osc.f, minFreq, maxFreq, mouthRange.xMin, mouthRange.xMax)
-  let mouthHeight = map(osc.getAmp(), minAmp, maxAmp, mouthRange.yMin, mouthRange.yMax)
-  rect(xCenter, yCenter, mouthWidth, mouthHeight)
+  rect(width/10*4, height/10*4, eyeSizeX, eyeSizeY)
+  rect(width/10*6, height/10*4, eyeSizeX, eyeSizeY)
+  rect(width/2, height/10*6, width/8, height/20)
 }
 
 function startUp() {
@@ -83,13 +54,4 @@ function mousePressed() {
 
 function mouseReleased() {
   talking = false;
-}
-
-function initMouthRange() {
-  mouthRange = {
-    xMin: width/80,
-    xMax: width/80*17,
-    yMin: width/80,
-    yMax: width/8
-  }
 }
