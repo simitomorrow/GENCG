@@ -14,7 +14,7 @@ While clicking on the screen you should hear a sound depending on where your mou
 
 ### 2. Mouth Movement
 
-Next step was to make that face make a fitting expression to the sound.
+Next step was to give that face a fitting expression to the sound.
 Also a couple of colleagues helped me with the square's shapes to make it look cuter.
 
 {% raw %}
