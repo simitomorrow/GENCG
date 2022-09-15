@@ -1,7 +1,7 @@
 # Day 02 - Grids & Iterative Patterns
 
 ## 1. Bubble Foam
-For my first graphic I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and it's online examples. Most of which use a grid interacting with mouse coordinates to e.g increase the density or size of the elements on the grid.
+For my first graphic I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and its online examples. Most of which use a grid interacting with mouse coordinates to e.g increase the density or size of the elements on the grid.
 
 So I borrowed that idea and started with something that looks like a bubble foam:
 

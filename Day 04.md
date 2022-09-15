@@ -28,21 +28,21 @@ for (let i = 0; i <= detail; i++) {
 
 
 {% raw %}
-<iframe src="content/day04/01/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day04/01/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 ### Recreation, Negative Delay (-1.5)
 
 
 {% raw %}
-<iframe src="content/day04/01-1.5/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day04/01-1.5/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 ### Recreation, no Delay (0)
 
 
 {% raw %}
-<iframe src="content/day04/01-0/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day04/01-0/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 This took me quite a while to understand.
@@ -56,7 +56,7 @@ But I couldn't recreate it. The previous examples use sin() and cos() which allo
 Creating a function to wrap around the canvas expressed in a formula with t was too much of an ask for my brain that day.
 
 {% raw %}
-<iframe src="content/day04/01-2/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day04/01-2/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 My circles would disappear at some point because of t getting so big, one tick would wrap the entire canvas. <br> As an afterthought I could have animated the circles without the need of a parameter t and create one for the lines seperatly...

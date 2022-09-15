@@ -46,31 +46,58 @@ function draw() {
     mouth()
   } else {
     osc.amp(0, 0.5);
-    rect(width/10*4, height/10*4, eyeSizeX, eyeSizeY)
-    rect(width/10*6, height/10*4, eyeSizeX, eyeSizeY)
-    rect(width/2, height/10*6, width/8, height/40)
+    rect(width/10*4, height/10*5, eyeSizeX, eyeSizeY)
+    rect(width/10*6, height/10*5, eyeSizeX, eyeSizeY)
+    rect(width/2, height/10*6.5, width/40, height/40)
   }
 }
 
 function leftEye(){
   let xCenter = width/10*4 
-  let yCenter = height/10*4
-  rect(xCenter, yCenter, eyeSizeX, eyeSizeY)
+  let yCenter = height/10*5
+  let dx = mx - xCenter
+  let dy = my - yCenter
+  let vect = createVector(dx, dy).normalize()
+  let distance = sqrt(dx**2 + dy**2)
+  let mappedDistance = map(distance, 0, maxDistance, 0, eyeRadius)
+  let xFollow = mappedDistance*vect.x
+  let yFollow = mappedDistance*vect.y
+  let eyeXStretch = map(osc.getAmp(), minAmp, maxAmp, 1, 1.2)
+  let eyeYStretch = map(osc.getAmp(), minAmp, maxAmp, 1, 0.62)
+  rect(xCenter+xFollow, yCenter+yFollow, eyeSizeX*eyeXStretch, eyeSizeY*eyeYStretch)
 }
 
 function rightEye(){
   let xCenter = width/10*6 
-  let yCenter = height/10*4
-  rect(xCenter, yCenter, eyeSizeX, eyeSizeY)
+  let yCenter = height/10*5
+  let dx = mx - xCenter
+  let dy = my - yCenter
+  let vect = createVector(dx, dy).normalize()
+  let distance = sqrt(dx**2 + dy**2)
+  let mappedDistance = map(distance, 0, maxDistance, 0, eyeRadius)
+  let xFollow = mappedDistance*vect.x
+  let yFollow = mappedDistance*vect.y
+  let eyeXStretch = map(osc.getAmp(), minAmp, maxAmp, 1, 1.2)
+  let eyeYStretch = map(osc.getAmp(), minAmp, maxAmp, 1, 0.62)
+  rect(xCenter+xFollow, yCenter+yFollow, eyeSizeX*eyeXStretch, eyeSizeY*eyeYStretch)
 }
 
 function mouth(){
   //ranges - width: 10 - 170, height: 10 - 10
   let xCenter = width/2 
-  let yCenter = height/10*6
+  let yCenter = height/10*6.5
+  let dx = mx - xCenter
+  let dy = my - yCenter
+  let vect = createVector(dx, dy).normalize()
+  let distance = sqrt(dx**2 + dy**2)
+  let maxDistance = sqrt(xCenter**2 + yCenter**2)
+  let mappedDistance = map(distance, 0, maxDistance/1.5, 0, eyeRadius)
+  let xFollow = mappedDistance*vect.x
+  let yFollow = mappedDistance*vect.y
   let mouthWidth = map(osc.f, minFreq, maxFreq, mouthRange.xMin, mouthRange.xMax)
   let mouthHeight = map(osc.getAmp(), minAmp, maxAmp, mouthRange.yMin, mouthRange.yMax)
-  rect(xCenter, yCenter, mouthWidth, mouthHeight)
+  rect(xCenter+xFollow, yCenter+yFollow, mouthWidth, mouthHeight)
+  
 }
 
 function startUp() {

@@ -61,14 +61,13 @@ It took me quite a lot of effort to wrap my mind around multiple staggered timer
 ### Quintic Easing
 
 {% raw %}
-<iframe src="content/day03/01/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day03/01/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 ### Elastic Easing
 
-
 {% raw %}
-<iframe src="content/day03/01-2/embed.html" width="100%" height="800" frameborder="no"></iframe>
+<iframe src="content/day03/01-2/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
 You can find the full code [here](https://github.com/simitomorrow/GENCG/blob/master/content/day03/01/sketch.js).
