@@ -33,7 +33,7 @@ function draw() {
 function initPixels() {
   for (let i = 0; i < gridXAmount; i++) {
     for (let j = 0; j < gridYAmount; j++) {
-      if(i == 15 && j == 15){
+      if(i == 5 && j == 9){
         pixels.push(new SoundPixel(i, j, j * gridXAmount + i, true))
       } else {
         pixels.push(new SoundPixel(i, j, j * gridXAmount + i, false))
