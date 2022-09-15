@@ -23,8 +23,8 @@ Also a couple of colleagues helped me with the square's shapes to make it look c
 
 ### 3. Following Mouse Cursor - Eyes
 
-After that I thought about making it follow my mouse cursor.
-It took a bit of vector math to create that effect
+After that I thought about making it follow my mouse cursor with its eyes.
+It took a bit of vector math to create that effect. 
 
 {% raw %}
 <iframe src="content/day06/01-3/embed.html" width="800" height="800" frameborder="no"></iframe>
