@@ -2,7 +2,7 @@
 
 This is a documentation/journal about two weeks of creating generative computer graphics in a course at HSLU. Each day a topic got presented as well as different sources of already existing art for inspiration. On the first day we got an introduction and a bit of history how graphics were generated in the early days of computation. This is how we had to start as well: generate graphics on paper. 
 
-The resources shared with us can be found ![here](https://github.com/digitalideation/gencg_h2101).
+The resources shared with us can be found [here](https://github.com/digitalideation/gencg_h2101).
 
 ## 1. Generative Graphics on Paper
 
@@ -56,7 +56,7 @@ To get back into the habit of coding with p5 most of us started by recreating th
 <br>
 
 ### My Version
-In my ![recreation](content/day01/embed.html) I also animated the circle to bounce within the window's border and played a bit with colors.
+In my recreation I also animated the circle to bounce within the window's border and played a bit with colors.
 
 {% raw %}
 <iframe src="content/day01/01/embed.html" width="800" height="800" frameborder="no"></iframe>
