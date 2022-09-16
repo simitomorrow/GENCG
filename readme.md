@@ -21,8 +21,8 @@ Rules:
 
 <br>
 
-### ???
-![???](content/day01/dontremember.jpg)
+### [Networks](https://conditionaldesign.org/workshops/networks/)
+![Networks](content/day01/dontremember.jpg)
 
 Rules:
 1. Each drawing consists of 4 elements: lines, circles, arrows and a title
