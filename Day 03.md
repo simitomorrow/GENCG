@@ -2,16 +2,16 @@
 
 ## Animating a Maze into a Clockwork
 
-Today's topic was about visualising the passing of time - an abstract form of a clock if you will. My mind immediatly ran to an idea I had to scrap yesterday because a lack of time. 
+Today's topic was about visualising the passing of time - an abstract form of a clock if you will. My mind immediately ran to an idea I had to scrap yesterday because a lack of time. 
 
 In the same course a friend created this maze the day before which he wanted to animate (rotate each part on the grid): <br>
-Unfortunately to our knowledge, there is no easy way to rotate the squares around an axis for each grid tile. 
+Unfortunately, to our knowledge, there is no easy way to rotate the squares around an axis for each grid tile. 
 
 ![Maze Idea](content/day03/lab.png)
 
-push(), rotate(), translate and pop() are cumbersome to work with and we wouldn't know of any method to access drawn rectangles in p5.js
+push(), rotate(), translate and pop() are cumbersome to work with, and we wouldn't know of any method to access drawn rectangles in p5.js
 
-So I had to the housework and keep track of my rectangles myself.
+So I had to do the housework and keep track of my rectangles myself.
 
 ```js
 let mazeTiles = []
@@ -44,8 +44,8 @@ Add in some color and that is the result:
 ![Maze Idea](content/day03/maze.png)
 
 <br>
-Next I wanted to add rotation.<br>
-After giving it some thought I came up with the idea to not rotate the squares but to just transform and translate. <br>
+Next, I wanted to add rotation.<br>
+After giving it some thought, I came up with the idea to not rotate the squares but to just transform and translate. <br>
 With the help of p5's rectMode(CORNERS); I would change the corner-coordinates of the upper rectangle to the one on the right.
 
 To make it snappy, I wanted to use one of the [easing methods](https://spicyyoghurt.com/tools/easing-functions) we got presented today:
@@ -55,8 +55,8 @@ To make it snappy, I wanted to use one of the [easing methods](https://spicyyogh
 <iframe src="content/day03/lerp example/embed.html" width="400" height="400" frameborder="no"></iframe>
 {% endraw %}
 
-After some playing around I chose "easeInOutQuint".<br>
-It took me quite a lot of effort to wrap my mind around multiple staggered timers but managed to put everything together in the end.
+After some playing around, I chose "easeInOutQuint".<br>
+It took me quite a lot of effort to wrap my mind around multiple, staggered timers but managed to put everything together in the end.
 
 ### Quintic Easing
 

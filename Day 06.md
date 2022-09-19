@@ -1,12 +1,12 @@
 # Day 06 - Faces
-The second week started with the task to creat something with faces.<br>
+The second week started with the task to create something with faces.<br>
 I thought about a robot that would talk in some sine wave chatter.
 
-Since I never worked with sound in p5.js I explored a bit and found an oscilator in p5's separate sound library. The [example](https://p5js.org/reference/#/p5.Oscillator) in the resources became my baseline of controlling the pitch and volume of the sine wave.
+Since I never worked with sound in p5.js I explored a bit and found an oscillator in p5's separate sound library. The [example](https://p5js.org/reference/#/p5.Oscillator) in the resources became my baseline of controlling the pitch and volume of the sine wave.
 
 ### 1. Version
 
-While clicking on the screen you should hear a sound depending on where your mouse cursor lies.
+While clicking on the screen, you should hear a sound depending on where your mouse cursor lies.
 
 {% raw %}
 <iframe src="content/day06/01/embed.html" width="800" height="800" frameborder="no"></iframe>
@@ -23,7 +23,7 @@ Also a couple of colleagues helped me with the square's shapes to make it look c
 
 ### 3. Following Mouse Cursor - Eyes
 
-After that I thought about making it follow my mouse cursor with its eyes.
+After that, I thought about making it follow my mouse cursor with its eyes.
 It took a bit of vector math to create that effect. 
 
 {% raw %}
@@ -32,7 +32,7 @@ It took a bit of vector math to create that effect.
 
 ### 4. Following Mouse Cursor - Mouth
 
-Again feedback of my colleagues suggesting I should try having its mouth follow the cursor as well. Subtle effect but I liked it.
+Again, feedback of my colleagues suggesting I should try having its mouth follow the cursor as well. Subtle effect but I liked it.
 
 {% raw %}
 <iframe src="content/day06/01-4/embed.html" width="800" height="800" frameborder="no"></iframe>
@@ -40,7 +40,7 @@ Again feedback of my colleagues suggesting I should try having its mouth follow 
 
 ### 5. Eye Pinching
 
-Lastly the suggestion came to make it pinch its eyes "in the effort" to make a louder sound. 
+Lastly, the suggestion came to make it pinch its eyes "in the effort" to make a louder sound. 
 
 {% raw %}
 <iframe src="content/day06/01-5/embed.html" width="800" height="800" frameborder="no"></iframe>

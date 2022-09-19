@@ -9,8 +9,8 @@ After giving it some more thought, I came to the conclusion, that this should qu
 
 ### Soundboard
 
-Either way I rolled with the idea and started simple:<br>
-Use p5's sound library polysinth to create a specificly pitched sound attached to a pixel.
+Either way, I rolled with the idea and started simple:<br>
+Use p5's sound library polysinth to create a specifically pitched sound attached to a pixel.
 
 {% raw %}
 <iframe src="content/day07/01/embed.html" width="800" height="800" frameborder="no"></iframe>
@@ -23,7 +23,7 @@ Clicking the grid will toggle a note on and off.
 Next was to make the pixels clickable in addition to toggle their corresponding note.
 
 This wasn't as easy as I thought: <br>
-Initially I would iterate through each pixel on every draw() frame and check if it was active. If yes I would play a note with a duration of one second. <br> But playing a note on every frame reactivated the sound and made it sound choppy.
+Initially, I would iterate through each pixel on every draw() frame and check if it was active. If yes, I would play a note with a duration of one second. <br> But playing a note on every frame reactivated the sound and made it sound choppy.
 
 In the end I had to keep track what notes were active myself and had to stop them with the method:
 ```js
@@ -34,7 +34,7 @@ polySynth.noteRelease(pixel.pitch)
 <iframe src="content/day07/01-2/embed.html" width="800" height="800" frameborder="no"></iframe>
 {% endraw %}
 
-For some reason though, the library could only handle 8 notes simultaneously. <br> If you click on more pixels an exception occurs:
+For some reason though, the library could only handle 8 notes simultaneously. <br> If you click on more pixels, an exception occurs:
 
 ![error](content/day07/error.png)
 

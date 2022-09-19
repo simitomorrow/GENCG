@@ -1,6 +1,6 @@
 # Day 01 - Generative Computer Graphics
 
-This is a documentation/journal about two weeks of creating generative computer graphics in a course at HSLU. Each day a topic got presented as well as different sources of already existing art for inspiration. On the first day we got an introduction and a bit of history how graphics were generated in the early days of computation. This is how we had to start as well: generate graphics on paper. 
+This is a documentation/journal about two weeks of creating generative computer graphics in a course at HSLU. Each day a topic got presented as well as different sources of already existing art for inspiration. On the first day, we got an introduction and a bit of history of how graphics were generated in the early days of computation. This is how we had to start as well: generate graphics on paper. 
 
 The resources shared with us can be found [here](https://github.com/digitalideation/gencg_h2101).
 

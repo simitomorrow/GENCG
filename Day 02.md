@@ -1,7 +1,7 @@
 # Day 02 - Grids & Iterative Patterns
 
 ## 1. Bubble Foam
-For my first graphic I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and its online examples. Most of which use a grid interacting with mouse coordinates to e.g increase the density or size of the elements on the grid.
+For my first graphic I was inspired by the book [Generative Gestaltung](http://www.generative-gestaltung.de/2/) and its online examples. Most of which use a grid interacting with mouse coordinates to e.g. increase the density or size of the elements on the grid.
 
 So I borrowed that idea and started with something that looks like a bubble foam:
 
@@ -39,7 +39,7 @@ The next image that struck my attention was this one:
 It seemed simple to recreate. Just a bunch of shapes with random colors distributed on a grid.
 
 ### 1. Lines
-I already had the grid so I started with lines:
+I already had the grid, so I started with lines:
 
 {% raw %}
 <iframe src="content/day02/03-1/embed.html" width="800" height="800" frameborder="no"></iframe>
@@ -156,6 +156,6 @@ function form3(x, y) {
 }
 ```
 
-Personally I didn't like it as much compared to just lines and circles. 
+Personally, I didn't like it as much compared to just lines and circles. 
 
-The generated pictures became a bit to busy...
+The generated pictures became a bit too busy...
